@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int a;
+    float b;
+    double d;       // Changed from 'c' to 'd' to avoid confusion
+    char ch;
+    char name[50];
+
+    // Input section
+    printf("Enter an integer: ");
+    scanf("%d", &a);                       // Added '&'
+
+    printf("Enter a float value: ");
+    scanf("%f", &b);
+
+    printf("Enter a double value: ");
+    scanf("%lf", &d);
+
+    printf("Enter a single character: ");
+    scanf(" %c", &ch);                     // space before %c to skip newline
+
+    printf("Enter a string (name): ");
+    scanf("%s", name); 
+
+    // Output section
+    printf("\n--- Output ---\n");
+    printf("Integer entered     : %d\n", a);
+    printf("Float entered       : %.2f\n", b);  // Fixed broken print statement
+    printf("Double entered      : %.2lf\n", d); // Fixed variable name and format
+    printf("Character entered   : %c\n", ch);
+    printf("String entered      : %s\n", name);
+
+    return 0;
+}
